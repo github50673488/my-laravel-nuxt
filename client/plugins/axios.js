@@ -25,6 +25,7 @@ export default ({ app, store, redirect }) => {
       request.headers.common['Accept-Language'] = locale
     }
 
+    request.params = { ...request.params, XDEBUG_SESSION_START: 'PHPSTORM' }
     return request
   })
 
